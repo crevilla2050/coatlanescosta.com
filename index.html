@@ -108,11 +108,48 @@
     footer a {
       color: #fff;
       text-decoration: none;
+      margin-bottom: 120px; /* leaves room for fixed widget */
     }
     footer a:hover {
       text-decoration: underline;
     }
-  </style>
+
+    .fixed-search {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 95%;
+      max-width: 1200px;
+      background: #5f5f5fcc;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+      z-index: 1050;
+      padding: 1rem 1.5rem;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
+
+      /* Mobile toggle bar */
+      .search-toggle {
+        cursor: pointer;
+        padding: 0.75rem;
+        background: #9e7ead;
+        color: white;
+        border-radius: 12px 12px 0 0;
+      }
+
+    @media (max-width: 768px) {
+      .search-form {
+        display: none;
+      }
+      .fixed-search.expanded .search-form {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+    }
+</style>
 </head>
 <body>
 
@@ -168,32 +205,39 @@
     <p class="lead mb-4">Conectamos Oaxaca y la Costa con puntualidad y confianza.</p>
     <a href="#rutas" class="btn btn-lilac btn-lg">Reservar Ahora</a>
 
-    <!-- SEARCH WIDGET -->
-    <div class="search-widget mt-4">
-      <form class="row g-3">
-        <div class="col-md-3">
+    <!-- BUSQUEDA  -->
+
+    <div class="search-widget fixed-search">
+      <!-- Toggle button (visible only on mobile) -->
+      <div class="search-toggle d-md-none text-center fw-semibold">
+        Buscar viaje ▾
+      </div>
+
+      <!-- Actual form -->
+      <form class="row g-3 align-items-end search-form">
+        <div class="col-md-3 col-6">
           <label for="desde" class="form-label">Desde:</label>
           <input type="text" id="desde" class="form-control" placeholder="Ciudad de origen">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-6">
           <label for="hacia" class="form-label">Hacia:</label>
           <input type="text" id="hacia" class="form-control" placeholder="Ciudad de destino">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-6">
           <label for="fecha" class="form-label">Fecha:</label>
           <div class="input-group">
             <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
             <input type="date" id="fecha" class="form-control">
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-6">
           <label for="pasajeros" class="form-label">Pasajeros:</label>
           <div class="input-group">
             <span class="input-group-text"><i class="bi bi-people"></i></span>
             <input type="number" id="pasajeros" class="form-control" value="1" min="1">
           </div>
         </div>
-        <div class="col-md-2 d-flex align-items-end">
+        <div class="col-md-2 col-12 d-grid">
           <button type="submit" class="btn btn-lilac w-100">Buscar</button>
         </div>
       </form>
@@ -286,7 +330,6 @@
 </section>
 
 <!-- FOOTER -->
-<!-- FOOTER -->
 <footer style="background: #5f5f5fcc; color: white; padding-top: 3rem; padding-bottom: 1.5rem;">
   <div class="container">
     <div class="row">
@@ -363,6 +406,21 @@
       navbar.classList.remove('scrolled');
     }
   });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".search-toggle");
+  const searchWidget = document.querySelector(".fixed-search");
+
+  if (toggle && searchWidget) {
+    toggle.addEventListener("click", () => {
+      searchWidget.classList.toggle("expanded");
+      toggle.textContent = searchWidget.classList.contains("expanded") 
+        ? "Cerrar búsqueda ▴" 
+        : "Buscar viaje ▾";
+    });
+  }
+});
 </script>
 </body>
 </html>
