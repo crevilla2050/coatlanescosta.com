@@ -26,9 +26,15 @@
       .hero {
         min-height: 60vh; /* menos altura en móviles */
       }
-      .hero-carousel .carousel img {
-        object-fit: cover;
-        height: 100%;
+      .hero-carousel .carousel-item img {
+        width: 100%;
+        height: 100vh; /* Makes it fill viewport height */
+        object-fit: cover; /* Ensures image fills space without gray borders */
+        object-position: center;
+      }
+      .carousel-item img {
+        height: 70vh; /* slightly shorter for phones so the UI fits */
+        min-height: 400px; /* prevent excessive shrinking */
       }
     }
     .hero {
@@ -49,7 +55,7 @@
     .hero-carousel .carousel-item {
       height: 100%;
     }
-    .hero-carousel .carousel img {
+    .hero-carousel .carousel-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
