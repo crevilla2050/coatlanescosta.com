@@ -190,10 +190,132 @@
     .bg-green { background: #00a650; color: #fff; }
     .footer-bg { background: #5f5f5fcc; color: white; padding-top: 3rem; padding-bottom: 1.5rem; }
     .spacer-bg { height: 100px; background: #5f5f5fcc; }
+
+    /* --- Add below your existing <style> block --- */
+
+/* 1. Section titles spacing and style */
+.section-title, h2.fw-bold {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 2. Card and service card improvements */
+.card, .service-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover, .service-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* 3. Images: rounded corners and shadow */
+.img-fluid.rounded, .img-fluid.shadow {
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* 4. CTA button animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #9e7ead88; }
+  70% { box-shadow: 0 0 0 10px #9e7ead00; }
+  100% { box-shadow: 0 0 0 0 #9e7ead00; }
+}
+.btn-lilac, .btn-cta {
+  animation: pulse 2s infinite;
+}
+
+/* 5. Section divider for transitions */
+.section-divider {
+  height: 40px;
+  background: linear-gradient(to right, #fff200 0%, #55c5d0 100%);
+  border: none;
+  margin: 0;
+}
+
+/* 6. Footer improvements */
+footer {
+  border-top: 4px solid #ec008c;
+  background: linear-gradient(90deg, #612f86 0%, #9e7ead 100%);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* 7. Responsive improvements for cards */
+@media (max-width: 768px) {
+  .card, .service-card {
+    margin-bottom: 1.5rem;
+  }
+  h2.fw-bold {
+    font-size: 2rem;
+  }
+}
+/* 1. Section titles spacing and style */
+.section-title, h2.fw-bold {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 2. Card and service card improvements */
+.card, .service-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover, .service-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* 3. Images: rounded corners and shadow */
+.img-fluid.rounded, .img-fluid.shadow {
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* 4. CTA button animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #9e7ead88; }
+  70% { box-shadow: 0 0 0 10px #9e7ead00; }
+  100% { box-shadow: 0 0 0 0 #9e7ead00; }
+}
+.btn-lilac, .btn-cta {
+  animation: pulse 2s infinite;
+}
+
+/* 5. Section divider for transitions */
+.section-divider {
+  height: 40px;
+  background: linear-gradient(to right, #fff200 0%, #55c5d0 100%);
+  border: none;
+  margin: 0;
+}
+
+/* 6. Footer improvements */
+footer {
+  border-top: 4px solid #ec008c;
+  background: linear-gradient(90deg, #612f86 0%, #9e7ead 100%);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* 7. Responsive improvements for cards */
+@media (max-width: 768px) {
+  .card, .service-card {
+    margin-bottom: 1.5rem;
+  }
+  h2.fw-bold {
+    font-size: 2rem;
+  }
+}
 </style>
 </head>
 <body>
-
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
@@ -264,8 +386,6 @@
     </div>
   </div>
 </header>
-
-<!-- After "RUTAS & HORARIOS" section -->
 <!-- After "RUTAS & HORARIOS" section -->
 <section class="py-5 bg-yellow">
   <div class="container my-5">
@@ -292,7 +412,7 @@
 <!-- RUTAS & HORARIOS -->
 <section id="rutas" class="py-5 bg-yellow">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4">Rutas Populares</h2>
+    <h2 class="fw-bold mb-4"><i class="bi bi-clock-history me-2"></i>Rutas Populares</h2>
     <div class="row">
       <div class="col-md-4">
         <div class="card shadow-sm">
@@ -326,9 +446,10 @@
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios" class="py-5 bg-cyan">
+<section id="servicios" class="py-5 bg-cyan"
+  style="background-image: url('imagenes/coatlanes_penacho.png'); background-repeat: no-repeat; background-position: right bottom; background-size: 400px;">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4">Nuestros Servicios</h2>
+    <h2 class="fw-bold mb-4"><i class="bi bi-bus-front me-2"></i>Nuestros Servicios</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="service-card p-4 shadow-sm bg-white h-100">
@@ -352,6 +473,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 </section>
 <!-- After "Nuestros Servicios" section -->
@@ -363,7 +485,7 @@
         <img src="imagenes/placeholder.jpg" alt="Servicios Coatlan Costa" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-6">
-        <h3>📦 Servicios Destacados</h3>
+        <h3><i class="bi bi-star me-2"></i>Servicios Destacados</h3>
         <ul>
           <li><strong>Viajes Regulares:</strong> Salidas frecuentes para tu comodidad.</li>
           <li><strong>Envíos de Paquetería:</strong> Servicio rápido y seguro entre Oaxaca y Puerto Escondido.</li>
@@ -376,7 +498,7 @@
 <!-- NOSOTROS -->
 <section id="nosotros" class="py-5 bg-pink">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4">¿Quiénes Somos?</h2>
+    <h2 class="fw-bold mb-4"><i class="bi bi-people-fill me-2"></i>¿Quiénes Somos?</h2>
     <p class="lead">Más de 30 años ofreciendo transporte confiable, cómodo y seguro entre la capital y la costa de Oaxaca.</p>
   </div>
 </section>
@@ -385,7 +507,7 @@
   <div class="container my-5">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h3>🛣️ Nuestra Historia</h3>
+        <h3><i class="bi bi-journal-bookmark me-2"></i>Nuestra Historia</h3>
         <p>
           La microrregión de los Coatlanes, conocida por sus suelos delgados y abundante agua, vio en la construcción de la supercarretera 175 una oportunidad para su desarrollo. En 2022, inspirados por la visión de Balbino Contreras López y Orlando Contreras Cruz, se formó la sociedad "Ruta Coatlanes", integrando comunidades como San Pablo, San Vicente y San Francisco Coatlan. Con el avance de la autopista, la sociedad se transformó en "Ruta Coatlan Costa" en 2024, iniciando operaciones el 5 de febrero del mismo año.
         </p>
@@ -400,7 +522,7 @@
 <!-- CONTACTO -->
 <section id="contacto" class="py-5 bg-purple">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4">Contacto</h2>
+    <h2 class="fw-bold mb-4"><i class="bi bi-envelope-at me-2"></i>Contacto</h2>
     <p>Teléfono: +52 (951) 530-2667</p>
     <p>Email: contacto@coatlanescosta.com</p>
     <a href="https://wa.me/529515302667" target="_blank" class="btn btn-success mt-3"><i class="bi bi-whatsapp"></i> WhatsApp</a>
@@ -415,7 +537,7 @@
         <img src="imagenes/img-051.jpg" alt="Compromiso Comunitario" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-6">
-        <h3>🌱 Compromiso Comunitario</h3>
+        <h3><i class="bi bi-globe-americas me-2"></i>🌱 Compromiso Comunitario</h3>
         <p>
           Nuestra misión es satisfacer las necesidades de movilidad y conectividad de personas y sus pertenencias, ofreciendo un servicio económico y cómodo bajo una cultura que fomente la participación comunitaria. Aspiramos a ser líderes en la región en movilidad y conectividad, distinguiéndonos por nuestra eficiencia, seriedad y seguridad.
         </p>
