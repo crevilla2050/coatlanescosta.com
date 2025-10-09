@@ -182,6 +182,14 @@
         margin-top: 0.5rem;
       }
     }
+
+    .bg-yellow { background: #fff200; }
+    .bg-cyan { background: #55c5d0; }
+    .bg-pink { background: #ec008c; color: #fff; }
+    .bg-purple { background: #612f86; color: #fff; }
+    .bg-green { background: #00a650; color: #fff; }
+    .footer-bg { background: #5f5f5fcc; color: white; padding-top: 3rem; padding-bottom: 1.5rem; }
+    .spacer-bg { height: 100px; background: #5f5f5fcc; }
 </style>
 </head>
 <body>
@@ -257,25 +265,32 @@
   </div>
 </header>
 
-<!-- HERO SECTION (after hero-content, now outside header) -->
-<div class="container mt-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center">
-      <h2>🌊 Viaja Seguro y Confortable con Ruta Coatlan Costa</h2>
-      <h4>🚐 Conectando Oaxaca con la Costa Oaxaqueña</h4>
-      <p>
-        Ruta Coatlan Costa es una empresa oaxaqueña que ofrece viajes redondos y servicio de paquetería cada 35 minutos desde la ciudad de Oaxaca a Puerto Escondido y viceversa. Nuestros modernos vehículos Mercedes Benz y Jac recorren la nueva autopista Barranca Larga - Ventanilla, garantizando un tiempo de traslado de aproximadamente 3 horas y media.
-      </p>
+<!-- After "RUTAS & HORARIOS" section -->
+<!-- After "RUTAS & HORARIOS" section -->
+<section class="py-5 bg-yellow">
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <!-- Placeholder for hero image -->
+        <img src="imagenes/anuncio.jpg" alt="Viaje seguro Coatlan Costa" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2>🌊 Viaja Seguro y Confortable con Ruta Coatlan Costa</h2>
+        <h4>🚐 Conectando Oaxaca con la Costa Oaxaqueña</h4>
+        <p>
+          Ruta Coatlan Costa es una empresa oaxaqueña que ofrece viajes redondos y servicio de paquetería cada 35 minutos desde la ciudad de Oaxaca a Puerto Escondido y viceversa. Nuestros modernos vehículos Mercedes Benz y Jac recorren la nueva autopista Barranca Larga - Ventanilla, garantizando un tiempo de traslado de aproximadamente 3 horas y media.
+        </p>
+      </div>
     </div>
-    <div class="col-md-6 text-center">
-      <!-- Placeholder for hero image -->
-      <img src="imagenes/anuncio.jpg" alt="Viaje seguro Coatlan Costa" class="img-fluid rounded shadow">
+    <!-- Background image figurita.png below all content -->
+    <div class="w-100 mt-5 text-center">
+      <img src="imagenes/figurita.png" alt="Decoración" class="img-fluid" style="max-width: 100%; opacity: 0.7;">
     </div>
   </div>
-</div>
+</section>
 
 <!-- RUTAS & HORARIOS -->
-<section id="rutas" class="py-5">
+<section id="rutas" class="py-5 bg-yellow">
   <div class="container text-center">
     <h2 class="fw-bold mb-4">Rutas Populares</h2>
     <div class="row">
@@ -311,7 +326,7 @@
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios" class="py-5 bg-light">
+<section id="servicios" class="py-5 bg-cyan">
   <div class="container text-center">
     <h2 class="fw-bold mb-4">Nuestros Servicios</h2>
     <div class="row g-4">
@@ -340,46 +355,50 @@
   </div>
 </section>
 <!-- After "Nuestros Servicios" section -->
-<div class="container my-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center">
-      <!-- Placeholder for services image -->
-      <img src="imagenes/placeholder.jpg" alt="Servicios Coatlan Costa" class="img-fluid rounded shadow">
-    </div>
-    <div class="col-md-6">
-      <h3>📦 Servicios Destacados</h3>
-      <ul>
-        <li><strong>Viajes Regulares:</strong> Salidas frecuentes para tu comodidad.</li>
-        <li><strong>Envíos de Paquetería:</strong> Servicio rápido y seguro entre Oaxaca y Puerto Escondido.</li>
-        <li><strong>Viajes Especiales:</strong> Disponibilidad de más de 50 unidades para grupos, empresas o eventos.</li>
-      </ul>
+<section class="py-5 bg-cyan">
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <!-- Placeholder for services image -->
+        <img src="imagenes/placeholder.jpg" alt="Servicios Coatlan Costa" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h3>📦 Servicios Destacados</h3>
+        <ul>
+          <li><strong>Viajes Regulares:</strong> Salidas frecuentes para tu comodidad.</li>
+          <li><strong>Envíos de Paquetería:</strong> Servicio rápido y seguro entre Oaxaca y Puerto Escondido.</li>
+          <li><strong>Viajes Especiales:</strong> Disponibilidad de más de 50 unidades para grupos, empresas o eventos.</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</section>
 <!-- NOSOTROS -->
-<section id="nosotros" class="py-5">
+<section id="nosotros" class="py-5 bg-pink">
   <div class="container text-center">
     <h2 class="fw-bold mb-4">¿Quiénes Somos?</h2>
     <p class="lead">Más de 30 años ofreciendo transporte confiable, cómodo y seguro entre la capital y la costa de Oaxaca.</p>
   </div>
 </section>
 <!-- After "¿Quiénes Somos?" section -->
-<div class="container my-5">
-  <div class="row align-items-center">
-    <div class="col-md-6">
-      <h3>🛣️ Nuestra Historia</h3>
-      <p>
-        La microrregión de los Coatlanes, conocida por sus suelos delgados y abundante agua, vio en la construcción de la supercarretera 175 una oportunidad para su desarrollo. En 2022, inspirados por la visión de Balbino Contreras López y Orlando Contreras Cruz, se formó la sociedad "Ruta Coatlanes", integrando comunidades como San Pablo, San Vicente y San Francisco Coatlan. Con el avance de la autopista, la sociedad se transformó en "Ruta Coatlan Costa" en 2024, iniciando operaciones el 5 de febrero del mismo año.
-      </p>
-    </div>
-    <div class="col-md-6 text-center">
-      <!-- Placeholder for history image -->
-      <img src="imagenes/atardecer.jpg" alt="Historia Coatlan Costa" class="img-fluid rounded shadow">
+<section class="py-5 bg-pink">
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h3>🛣️ Nuestra Historia</h3>
+        <p>
+          La microrregión de los Coatlanes, conocida por sus suelos delgados y abundante agua, vio en la construcción de la supercarretera 175 una oportunidad para su desarrollo. En 2022, inspirados por la visión de Balbino Contreras López y Orlando Contreras Cruz, se formó la sociedad "Ruta Coatlanes", integrando comunidades como San Pablo, San Vicente y San Francisco Coatlan. Con el avance de la autopista, la sociedad se transformó en "Ruta Coatlan Costa" en 2024, iniciando operaciones el 5 de febrero del mismo año.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <!-- Placeholder for history image -->
+        <img src="imagenes/atardecer.jpg" alt="Historia Coatlan Costa" class="img-fluid rounded shadow">
+      </div>
     </div>
   </div>
-</div>
+</section>
 <!-- CONTACTO -->
-<section id="contacto" class="py-5 bg-light">
+<section id="contacto" class="py-5 bg-purple">
   <div class="container text-center">
     <h2 class="fw-bold mb-4">Contacto</h2>
     <p>Teléfono: +52 (951) 530-2667</p>
@@ -388,20 +407,22 @@
   </div>
 </section>
 <!-- Before footer -->
-<div class="container my-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center">
-      <!-- Placeholder for community image -->
-      <img src="imagenes/img-051.jpg" alt="Compromiso Comunitario" class="img-fluid rounded shadow">
-    </div>
-    <div class="col-md-6">
-      <h3>🌱 Compromiso Comunitario</h3>
-      <p>
-        Nuestra misión es satisfacer las necesidades de movilidad y conectividad de personas y sus pertenencias, ofreciendo un servicio económico y cómodo bajo una cultura que fomente la participación comunitaria. Aspiramos a ser líderes en la región en movilidad y conectividad, distinguiéndonos por nuestra eficiencia, seriedad y seguridad.
-      </p>
+<section class="py-5 bg-green">
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <!-- Placeholder for community image -->
+        <img src="imagenes/img-051.jpg" alt="Compromiso Comunitario" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h3>🌱 Compromiso Comunitario</h3>
+        <p>
+          Nuestra misión es satisfacer las necesidades de movilidad y conectividad de personas y sus pertenencias, ofreciendo un servicio económico y cómodo bajo una cultura que fomente la participación comunitaria. Aspiramos a ser líderes en la región en movilidad y conectividad, distinguiéndonos por nuestra eficiencia, seriedad y seguridad.
+        </p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 <!-- FOOTER -->
 <footer style="background: #5f5f5fcc; color: white; padding-top: 3rem; padding-bottom: 1.5rem;">
   <div class="container">
@@ -441,8 +462,8 @@
       <div class="col-md-4 mb-4">
         <h5>SUBSCRÍBETE</h5>
         <form class="d-flex">
-          <input type="email" class="form-control me-2" placeholder="Enter your e-mail address...">
-          <button type="submit" class="btn btn-lilac">GO</button>
+          <input type="email" class="form-control me-2" placeholder="Escriba su correo electrónico...">
+          <button type="submit" class="btn btn-lilac">Registrar</button>
         </form>
       </div>
 
