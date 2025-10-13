@@ -13,7 +13,7 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #612f86 url('imagenes/fondo_secc.jpg') no-repeat center center;
+      background: #612f86 url('imagenes/fondo_secc2.jpg') no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
       color: #fff;
@@ -98,6 +98,18 @@
         padding: 1.5rem 0.5rem;
       }
     }
+    .gallery-img {
+			border: 4px solid #fff;
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.gallery-img:hover {
+			transform: scale(1.03);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+		}
+		figcaption {
+			text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+		}
   </style>
 </head>
 <body>
@@ -146,6 +158,52 @@
             Tu navegador no soporta el video.
           </video>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECCION TAQUILLAS -->
+<section class="py-5" style="background: rgba(255,255,255,0.08);">
+  <div class="container text-center">
+    <h2 class="text-warning fw-bold mb-4">Nuestras Terminales</h2>
+    <p class="mb-5" style="font-size: 1.1rem;">Explora algunos momentos de nuestros viajes y terminales. Cada terminal representa nuestro compromiso con tu comodidad y seguridad.</p>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4">
+        <figure class="text-center">
+          <img src="imagenes/taquilla1.jpg" class="img-fluid rounded shadow gallery-img" alt="Terminal Oaxaca - Armenta y López">
+          <figcaption class="mt-2 text-white fw-semibold small">Terminal Oaxaca - Armenta y López</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <figure class="text-center">
+          <img src="imagenes/taquilla2.jpg" class="img-fluid rounded shadow gallery-img" alt="Terminal la Y">
+          <figcaption class="mt-2 text-white fw-semibold small">Terminal la Y</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <figure class="text-center">
+          <img src="imagenes/taquilla3.jpg" class="img-fluid rounded shadow gallery-img" alt="Terminal Santa Lucía">
+          <figcaption class="mt-2 text-white fw-semibold small">Terminal Santa Lucía</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <figure class="text-center">
+          <img src="imagenes/taquilla4.jpg" class="img-fluid rounded shadow gallery-img" alt="Terminal San Pablo Coatlán">
+          <figcaption class="mt-2 text-white fw-semibold small">Terminal San Pablo Coatlán</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <figure class="text-center">
+          <img src="imagenes/taquilla5.jpg" class="img-fluid rounded shadow gallery-img" alt="Terminal Zicatela">
+          <figcaption class="mt-2 text-white fw-semibold small">Terminal Zicatela</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <figure class="text-center">
+          <img src="imagenes/taquilla6.jpg" class="img-fluid rounded shadow gallery-img" alt="Terminal Puerto Escondido">
+          <figcaption class="mt-2 text-white fw-semibold small">Terminal Puerto Escondido</figcaption>
+        </figure>
       </div>
     </div>
   </div>
