@@ -1,0 +1,179 @@
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #612f86 url('imagenes/coatlanes_penacho.png') no-repeat left bottom;
+      background-size: 480px;
+      background-attachment: fixed;
+      background-blend-mode: lighten;
+      color: #fff;
+    }
+    .navbar.scrolled {
+      background: #876494 !important;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nosotros-section {
+		
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+	  
+	   background-image: url('imagenes/Serpiente.png');
+      background-repeat: no-repeat;
+      background-position: Left bottom;
+      background-size: 600px auto;
+      background-attachment: fixed;
+      background-blend-mode: lighten;
+	  
+	  
+    }
+    .nosotros-card {
+      background: #fff200;
+      color: #612f86;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .nosotros-media {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .nosotros-media img, .nosotros-media video {
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      max-width: 320px;
+      width: 100%;
+      background: #fff;
+    }
+    .nosotros-media video {
+      max-width: 400px;
+      height: auto;
+      display: block;
+    }
+	
+	
+	
+	 .historia-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .historia-card {
+      background: #55c5d0;
+      color: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .historia-media {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .historia-media img, .historia-media video {
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      max-width: 320px;
+      width: 100%;
+      background: #fff;
+    }
+    .historia-media video {
+      max-width: 400px;
+      height: auto;
+      display: block;
+    }
+	
+	
+	
+    h2, h5 {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .btn-lilac {
+      background-color: #9e7ead;
+      color: white;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-lilac:hover {
+      background-color: #876494;
+      color: white;
+    }
+    footer {
+      background: linear-gradient(90deg, #612f86 0%, #9e7ead 100%);
+      color: white;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-top: 4px solid #ec008c;
+    }
+    .footer-link {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+        background-position: center center;
+      }
+      .nosotros-card {
+        padding: 1.5rem 0.5rem;
+      }
+	  .historia-card {
+        padding: 1.5rem 0.5rem;
+      }
+    }
+   .gallery-img {
+			border: 4px solid #fff;
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.gallery-img:hover {
+			transform: scale(1.03);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+		}
+		figcaption {
+			text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+		}
+	 .bg-yellow { background: #fff200; }
+    .bg-cyan { background: #55c5d0; }
+    .bg-pink { background: #ec008c; color: #fff; }
+    .bg-purple { background: #612f86; color: #fff; }
+    .bg-green { background: #00a650; color: #fff; }
+    .footer-bg { background: #5f5f5fcc; color: white; padding-top: 3rem; padding-bottom: 1.5rem; }
+    .spacer-bg { height: 100px; background: #5f5f5fcc; }
+
+    @media (max-width: 768px) {
+      .navbar.scrolled,
+      .nosotros-card,
+      .nosotros-media img,
+      .nosotros-media video,
+      .historia-card,
+      .historia-media img,
+      .historia-media video,
+      .gallery-img,
+      .gallery-img:hover,
+      .shadow-sm:hover {
+        box-shadow: none !important;
+      }
+    }

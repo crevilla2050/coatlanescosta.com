@@ -1,0 +1,433 @@
+body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .navbar.scrolled {
+      background: #876494 !important;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    /* Fade/blend effect for navbar when scrolled */
+    .navbar.scrolled {
+      background: rgba(50, 30, 80, 0.92); /* Example: dark, semi-transparent */
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55); /* semi-transparent black overlay */
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 60vh; /* menos altura en móviles */
+      }
+      .hero-carousel .carousel-item img {
+        width: 100%;
+        height: 70vh; /* slightly shorter for phones so the UI fits */
+        min-height: 400px; /* prevent excessive shrinking */
+        object-fit: cover; /* Ensures image fills space without gray borders */
+        object-position: center;
+      }
+      .carousel-caption {
+        padding: 0.5rem 1rem;
+        max-width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 15%; /* bigger click area */
+      }
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero-carousel {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .hero-carousel .carousel-inner,
+    .hero-carousel .carousel-item {
+      height: 100%;
+    }
+    .hero-carousel {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .hero-carousel video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      z-index: 10 !important;
+      width: 10%; /* make tap area larger on mobile */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-cta {
+      font-size: 1.25rem;
+      padding: .75rem 1.5rem;
+      background-color: #9e7ead; /* lilac */
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-cta:hover {
+      background-color: #876494; /* slightly darker lilac for hover */
+    }
+    .btn-lilac {
+      background-color: #9e7ead;
+      color: white;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-lilac:hover {
+      background-color: #876494; /* darker lilac on hover */
+      color: white;
+    }
+    .search-widget {
+      background: #5f5f5fcc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .service-card i {
+      font-size: 3rem;
+      color: #9e7ead;
+    }
+    footer {
+      background: #5f5f5fcc; /* match search widget */
+      color: white;
+      padding: 2rem 0;
+      transition: background 0.3s ease;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 120px; /* leaves room for fixed widget */
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .fixed-search {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 95%;
+      max-width: 900px;
+      background: #5f5f5fcc;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+      z-index: 1050;
+      padding: 1rem 1.5rem;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
+
+      /* Mobile toggle bar */
+      .search-toggle {
+        cursor: pointer;
+        padding: 0.75rem;
+        background: #9e7ead;
+        color: white;
+        border-radius: 12px 12px 0 0;
+      }
+
+    @media (max-width: 768px) {
+      .search-form {
+        display: none;
+      }
+      .fixed-search.expanded .search-form {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+    }
+	.bg-btn-yellow { background: #fff200; }
+    .bg-yellow { background: #fff200; }
+    .bg-cyan { background: #55c5d0; }
+    .bg-pink { background: #ec008c; color: #fff; }
+    .bg-purple { background: #612f86; color: #fff; }
+    .bg-green { background: #00a650; color: #fff; }
+    .footer-bg { background: #5f5f5fcc; color: white; padding-top: 3rem; padding-bottom: 1.5rem; }
+    .spacer-bg { height: 100px; background: #5f5f5fcc; }
+
+    /* --- Add below your existing <style> block --- */
+
+/* 1. Section titles spacing and style */
+
+
+    .bg-btn-yellow:hover {
+      background-color: #fff299; /* darker yellow on hover */
+      color: black;
+    }
+
+.section-title, h2.fw-bold {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 2. Card and service card improvements */
+.card, .service-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover, .service-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+ .service-just-card {
+    margin-bottom: 1.5rem;
+  }
+  .service-just-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  
+}
+
+
+
+.service-just-card :hover {
+  
+ 
+}
+
+
+
+/* 3. Images: rounded corners and shadow */
+.img-fluid.rounded, .img-fluid.shadow {
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* 4. CTA button animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #9e7ead88; }
+  70% { box-shadow: 0 0 0 10px #9e7ead00; }
+  100% { box-shadow: 0 0 0 0 #9e7ead00; }
+}
+.btn-lilac, .btn-cta {
+  animation: pulse 2s infinite;
+}
+
+/* 5. Section divider for transitions */
+.section-divider {
+  height: 40px;
+  background: linear-gradient(to right, #fff200 0%, #55c5d0 100%);
+  border: none;
+  margin: 0;
+}
+
+/* 6. Footer improvements */
+footer {
+  border-top: 4px solid #ec008c;
+  background: linear-gradient(90deg, #612f86 0%, #9e7ead 100%);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* 7. Responsive improvements for cards */
+@media (max-width: 768px) 
+{
+  .card, .service-card {
+    margin-bottom: 1.5rem;
+  }
+ .service-just-card {
+    margin-bottom: 1.5rem;
+  }
+  .service-just-card {
+  border-radius: 18px;
+ 
+}
+  h2.fw-bold {
+    font-size: 2rem;
+  }
+}
+/* 1. Section titles spacing and style */
+.section-title, h2.fw-bold {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 2. Card and service card improvements */
+ .service-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+
+.card:hover, .service-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+
+/* 3. Images: rounded corners and shadow */
+.img-fluid.rounded, .img-fluid.shadow {
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* 4. CTA button animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #9e7ead88; }
+  70% { box-shadow: 0 0 0 10px #9e7ead00; }
+  100% { box-shadow: 0 0 0 0 #9e7ead00; }
+}
+.btn-lilac, .btn-cta {
+  animation: pulse 2s infinite;
+}
+
+/* 5. Section divider for transitions */
+.section-divider {
+  height: 40px;
+  background: linear-gradient(to right, #fff200 0%, #55c5d0 100%);
+  border: none;
+  margin: 0;
+}
+
+/* 6. Footer improvements */
+footer {
+  border-top: 4px solid #ec008c;
+  background: linear-gradient(90deg, #612f86 0%, #9e7ead 100%);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* 7. Responsive improvements for cards */
+@media (max-width: 768px) {
+  .card, .service-card {
+    margin-bottom: 1.5rem;
+  }
+  h2.fw-bold {
+    font-size: 2rem;
+  }
+}
+
+
+
+.nosotros-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .nosotros-card {
+      background: #fff200;
+      color: #612f86;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .nosotros-media {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .nosotros-media img, .nosotros-media video {
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      max-width: 320px;
+      width: 100%;
+      background: #fff;
+    }
+    .nosotros-media video {
+      max-width: 400px;
+      height: auto;
+      display: block;
+    }
+    h2, h5 {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .btn-lilac {
+      background-color: #9e7ead;
+      color: white;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-lilac:hover {
+      background-color: #876494;
+      color: white;
+    }
+    footer {
+      background: linear-gradient(90deg, #612f86 0%, #9e7ead 100%);
+      color: white;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-top: 4px solid #ec008c;
+    }
+    .footer-link {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+        background-position: center center;
+      }
+      .nosotros-card {
+        padding: 1.5rem 0.5rem;
+      }
+    }
+   .gallery-img {
+			border: 4px solid #fff;
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.gallery-img:hover {
+			transform: scale(1.03);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+		}
+		figcaption {
+			text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+		}
